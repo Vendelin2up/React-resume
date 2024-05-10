@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   updateName,
@@ -12,10 +12,19 @@ import "../components/ContactForm.css";
 const ContactForm = () => {
   const dispatch = useDispatch();
   const form = useSelector((state) => state.contactForm);
+  const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    if (submitted) {
+      alert("The message has been sent!");
+      setSubmitted(false);
+    }
+  }, [submitted]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch(resetForm());
+    setSubmitted(true);
   };
 
   return (
