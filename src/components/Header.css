@@ -1,0 +1,15 @@
+header {
+  border-radius: 5px;
+  padding: 1% 2%;
+  cursor: pointer;
+  background: linear-gradient(145deg, #9427bb, #632589);
+  border: 1px solid #872ca5;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s;
+}
+header a {
+  /* text-decoration: none; */
+  color: white;
+  font-family: "Jersey 15", sans-serif;
+  font-size: 24px;
+}
